@@ -1,0 +1,17 @@
+# Node.js frontend
+**/node_modules/
+**/dist/
+**/build/
+**/.env
+**/.env.local
+
+# Java backend
+**/target/
+**/.idea/
+**/.vscode/
+**/.DS_Store
+**/*.iml
+foodies-api/src/main/resources/application.properties
+
+# Logs and system files
+*.log
