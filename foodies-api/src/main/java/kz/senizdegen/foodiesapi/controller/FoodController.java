@@ -25,12 +25,12 @@ public class FoodController {
 
     @PostMapping
     public ResponseEntity<FoodResponse> addFood(@RequestPart("food") String foodString,
-                                         @RequestPart("file")MultipartFile file) {
+                                                @RequestPart("file") MultipartFile file) {
         ObjectMapper objectMapper = new ObjectMapper();
         FoodRequest request = null;
         try {
             request = objectMapper.readValue(foodString, FoodRequest.class);
-        }catch (JsonProcessingException e){
+        } catch (JsonProcessingException e) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid JSON format");
         }
 
@@ -40,7 +40,9 @@ public class FoodController {
 
     @GetMapping
     public List<FoodResponse> readFoods() {
+        System.out.println("✅ /api/foods endpoint hit!");
         return foodService.readFoods();
+
     }
 
     @GetMapping("/{id}")

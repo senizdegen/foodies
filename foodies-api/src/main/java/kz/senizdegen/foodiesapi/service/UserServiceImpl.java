@@ -5,7 +5,6 @@ import kz.senizdegen.foodiesapi.io.UserRequest;
 import kz.senizdegen.foodiesapi.io.UserResponse;
 import kz.senizdegen.foodiesapi.repository.UserRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
